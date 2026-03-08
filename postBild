@@ -10,6 +10,6 @@ mkdir build
 cd build
 
 cmake ..
-make -j2
+make -j
 
 echo "export RAPIDSIM_ROOT=/home/jovyan/RapidSim" >> ~/.bashrc
