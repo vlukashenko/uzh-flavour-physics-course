@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+git clone https://github.com/gcowan/RapidSim.git
+
+cd RapidSim
+
+mkdir build
+cd build
+
+cmake ..
+make -j2
+
+echo "export RAPIDSIM_ROOT=/home/jovyan/RapidSim" >> ~/.bashrc

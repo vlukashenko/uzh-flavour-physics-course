@@ -1,0 +1,9 @@
+zfit
+root
+uproot
+numpy
+scipy
+matplotlib
+pandas
+awkward
+seaborn
