@@ -1,15 +1,12 @@
-#!/bin/bash
-
 set -e
 
-git clone https://github.com/gcowan/RapidSim.git
+mkdir -p data
+wget -O data/norm_channel_toy.root "https://uzh-my.sharepoint.com/:u:/g/personal/valeriia_lukashenko_physik_uzh_ch/IQBf16PdGGt5SKkEVco7qTdSAYkfAJQmEK3h43KH0HILdI4?e=aBs6Fw"
+wget -O data/norm_toy.root "https://uzh-my.sharepoint.com/:u:/g/personal/valeriia_lukashenko_physik_uzh_ch/IQAIM1VGJJBXTpW9RKeSRE2ZAU_C-ikuLrqyn2m8MUTpn40?e=5B4T4h"
+wget -O data/bs2mumu_toy.root "https://uzh-my.sharepoint.com/:u:/g/personal/valeriia_lukashenko_physik_uzh_ch/IQB_1o-pRtTmTZ2y20oIkqdHAbk23OQzjVLViG4bCYW8_gg?e=q3yK25"
+wget -O data/bu2jpsikplus_toy.root "https://uzh-my.sharepoint.com/:u:/g/personal/valeriia_lukashenko_physik_uzh_ch/IQCvgWIW7vHdTZIFZJ1QZG_NASr4CA0wTlBVGWkeggtfmPY?e=IcCwcH"
+wget -O data/full_toy.root "https://uzh-my.sharepoint.com/:u:/g/personal/valeriia_lukashenko_physik_uzh_ch/IQCfSiirZbTdSKHNQLbMojCvAUJNg0sVsImy_m516VCzz1o?e=ha4eC6"
+wget -O data/peaking_bkg_bu2jpsikplus_toy.root "https://uzh-my.sharepoint.com/:u:/g/personal/valeriia_lukashenko_physik_uzh_ch/IQB_IKGl1GZsSorTAeXhI4P3ARWByODHLPofFy9zQfimPsE?e=rWoc6E"
+wget -O data/peaking_bkg_toy.root "https://uzh-my.sharepoint.com/:u:/g/personal/valeriia_lukashenko_physik_uzh_ch/IQC2v2kS1b8oSIF18SoUEgLmAch6SsC6vbkh1_GhmeU9Op8?e=4ZYzIS"
+wget -O data/semi_bkg_toy.root "https://uzh-my.sharepoint.com/:u:/g/personal/valeriia_lukashenko_physik_uzh_ch/IQC_a0p0cRFqQbcFyartDbCmAQiE1x1akIjvxXPDJRVXnTI?e=C39rcw"
 
-cd RapidSim
-
-mkdir build
-cd build
-
-cmake ..
-make -j
-
-echo "export RAPIDSIM_ROOT=/home/jovyan/RapidSim" >> ~/.bashrc
